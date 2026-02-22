@@ -1,7 +1,7 @@
 # Graphik Designer
 
 **Leonchikova Anastasiya**  
-[About me](#) | [Experience](#) | [Education](#) | [Skills](#) | [Code Example](#)
+[About me](#about-me) | [Experience](#my-wayexperience) | [Education](#education) | [Skills](#skills) | [Code Example](#code-example)
 
 ## About me
 
