@@ -2,26 +2,30 @@
 * {
   box-sizing: border-box;
 }
+/*HEADER*/
 .nav-list {
   justify-content: center;
   list-style: none;
   display: flex;
   justify-self: center;
-  column-gap: 1.88rem;
+  column-gap: 33px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 .container-for-list {
+  top: 2.75px;
   position: relative;
   display: flex;
   max-width: 1200px;
   padding-left: 16.22rem;
+  height: 4.4rem;
   margin: 0 auto;
 }
+
 .nav-item {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem; /* 111.111% */
@@ -44,4 +48,32 @@ body {
   width: 5.8125rem;
   height: 3.1875rem;
   border: 1px solid #000000;
+}
+.container-for-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.container-for-text {
+  position: absolute;
+  top: 13.12rem;
+  left: 1.8rem;
+  width: 28rem;
+  padding-left: 23.5px;
+  padding-bottom: 27px;
+  line-height: 1.3;
+  transform: translateY(-20%);
+  font-size: 3.75rem;
+}
+.container-for-text-in-text {
+  position: absolute;
+  font-size: 1.125rem;
+  color: #fff;
+  left: 1.8rem;
+  padding-left: 23px;
+  bottom: 12.8rem;
+}
+/*MAIN*/
+.container-images-woman {
+  display: flexbox;
 }
