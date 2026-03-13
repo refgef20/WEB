@@ -24,6 +24,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 .container-for-list {
   /* top: 2.75px;
@@ -41,7 +42,6 @@ body {
   margin: 0 auto;
   align-items: center;
   padding-right: 1.5rem;
-
   grid-template-rows: repeat(1, fit-content(100%));
   transform: translateY(-20%);
 
@@ -69,7 +69,6 @@ body {
   padding: 16px 2px;
   justify-content: flex-end;
   align-items: center;
-
   grid-row: 1;
   grid-column: 3;
   justify-self: end;
@@ -119,5 +118,23 @@ body {
 .container-for-gif {
   position: absolute;
   display: flex;
-  gap: 756px;
+  gap: 800px;
+  right: -70px;
+}
+.container-for-symbol {
+  display: flex;
+  width: 1201px;
+  height: 161px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  margin-top: -25px;
+  margin-left: 28px;
+}
+.image-for-symbol {
+  width: 28.112px;
+  height: 28.93px;
 }
