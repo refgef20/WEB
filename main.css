@@ -18,7 +18,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .container-for-list {
   display: grid;
@@ -79,9 +79,9 @@ body {
   position: absolute;
   font-size: 1.125rem;
   color: #fff;
-  transform: translateY(70%);
+
   padding-left: 23px;
-  bottom: 7.5rem;
+  bottom: 9.5rem;
 }
 /*MAIN*/
 .container-images-woman {
@@ -91,8 +91,9 @@ body {
   width: 100%;
   max-width: 1200px;
   height: 650px;
+  margin: 0 auto;
   margin-top: 64px;
-  padding-left: 62px;
+  padding-left: 32px;
   flex-wrap: wrap;
 }
 .container-for-gif {
@@ -112,8 +113,9 @@ body {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   box-sizing: border-box;
+  margin: auto;
   margin-top: -25px;
-  margin-left: 28px;
+  /* margin-left: 28px; */
 }
 .image-for-symbol {
   width: 28.112px;
