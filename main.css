@@ -18,7 +18,10 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  /* overflow-x: hidden; */
+}
+html,
+body {
+  overflow-x: hidden;
 }
 .container-for-list {
   display: grid;
@@ -81,7 +84,7 @@ body {
   color: #fff;
 
   padding-left: 23px;
-  bottom: 9.5rem;
+  bottom: 5.2rem;
 }
 /*MAIN*/
 .container-images-woman {
