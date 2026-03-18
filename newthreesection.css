@@ -352,3 +352,84 @@
   border: 1px solid #000;
   background-color: #fff;
 }
+
+/*новая секция*/
+
+.container-for-comments {
+  display: flex;
+  width: 75rem;
+  height: 55.5rem;
+  padding: 3.9375rem 3.5rem 15.75rem 3.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.9375rem;
+
+  margin: 0 auto;
+}
+
+.tittle-comments {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 2.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.6rem; /* 128% */
+  margin: 0 auto;
+  margin-top: 3.94rem;
+}
+
+.container-for-reviews {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1875rem;
+  margin: 0 auto;
+}
+.container-for-review {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 21.875rem;
+  padding: 1.3125rem 0.9375rem 1rem 0.9375rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  box-shadow: -4px 0 14px 0 rgba(0, 0, 0, 0.06);
+}
+.text1-pimple {
+  margin: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35rem; /* 120% */
+  align-self: stretch;
+}
+.container-for-starstext {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-height: 1.06rem;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  gap: 0.4375rem;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.text2-pimple {
+  margin: 0;
+  padding: 0;
+  flex: 1 0 0;
+  color: #737373;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.05rem; /* 120% */
+}
