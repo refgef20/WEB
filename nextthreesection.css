@@ -44,8 +44,10 @@
 /* новая секция */
 
 .container-for-experts {
+  margin: 0;
+  padding: 0;
   margin-left: 8.89rem;
-  margin-top: 198px;
+  margin-top: 163px;
 
   display: flex;
   width: 100%;
@@ -53,10 +55,11 @@
   align-items: center;
   align-content: center;
   gap: 1.9375rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .container-for-textexperts {
   margin: 0;
+  padding-bottom: 18px;
   display: flex;
   max-width: 28.5625rem;
   flex-direction: column;
@@ -76,12 +79,16 @@
   align-self: stretch;
 }
 .container-text2-experts {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: flex-end;
   gap: 1rem;
   align-self: stretch;
 }
 .container-for-tick {
+  margin: 0;
+  padding: 0;
   display: flex;
   width: 1.5rem;
   flex-direction: column;
@@ -107,4 +114,64 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem; /* 117.647% */
+}
+.container-card-experts {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 1.25rem;
+  transform: translateY(-2.53%);
+}
+.container-woman-exp {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 21.875rem;
+  padding: 1.0625rem 1.0625rem 0.9375rem 1.0625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9375rem;
+  border-radius: 1rem;
+  border: 1px solid #000;
+  background: #fff;
+  box-shadow: 0 4px 54px 0 #fff;
+
+  min-height: 21.7rem;
+}
+.container-text-expwoman {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+.text-exp {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35rem; /* 120% */
+}
+.text2-exp {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 12.5625rem;
+  align-self: stretch;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35rem; /* 127.059% */
 }
