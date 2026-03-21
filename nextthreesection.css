@@ -290,3 +290,50 @@
   line-height: 1.35rem; /* 127.059% */
   align-self: stretch;
 }
+/* новая секция*/
+.container-for-satrted {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  width: 75rem;
+  padding: 3.9375rem 27.25rem 23.0625rem 27.3125rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.title-start {
+  padding: 0;
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 2.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.6rem; /* 128% */
+}
+.button-quiz {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 13.5rem;
+  padding: 0.8125rem 1.5rem 0.8125rem 1.5625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  background: #000;
+}
+.text-in-quiz {
+  margin: 0;
+  padding: 0;
+  flex: 1 0 0;
+  align-self: stretch;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
