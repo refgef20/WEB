@@ -175,3 +175,118 @@
   font-weight: 400;
   line-height: 1.35rem; /* 127.059% */
 }
+
+/* новая секция */
+.container-for-care {
+  margin: 0 auto;
+  margin-top: 79px;
+  display: flex;
+  width: 75rem;
+  height: 38rem;
+  padding: 3.875rem 7.13rem 3.9375rem 7.13rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.title-care {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 2.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.6rem; /* 128% */ /* 128% */
+}
+.container-for-stapecare {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 5.71rem;
+  flex-wrap: wrap;
+}
+.card-step-care {
+  display: flex;
+  width: 100%;
+  max-width: 15.75rem;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2.7375rem;
+}
+.image-step-care {
+  margin-right: 10px;
+  padding: 0;
+  display: flex;
+  width: 9.625rem;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+
+  align-self: stretch;
+}
+.itame-image-step {
+  margin: 0 auto;
+  padding: 0;
+  height: 13.9375rem;
+  align-self: stretch;
+  border-radius: 1.875rem;
+  border: 2px solid #000;
+}
+.button-step-care {
+  margin: 0;
+  padding: 0;
+  margin-top: -1.25rem;
+  display: flex;
+
+  padding: 0.5625rem 0 0.6875rem 0;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1.625rem;
+  border: 2px solid #000;
+  background: #fff;
+  width: 100%;
+  max-width: 6.13rem;
+  max-height: 2.5rem;
+}
+.text-in-button {
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 125% */
+}
+.container-for-text-step {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+.text1-in-step {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35rem; /* 120% */
+}
+.text2-in-step {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35rem; /* 127.059% */
+  align-self: stretch;
+}
