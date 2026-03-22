@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .container-for-faqs {
   margin: 0 auto;
-  margin-top: 125px;
+  /* margin-top: 120px; */
   display: flex;
   width: 59.8125rem;
   flex-direction: column;
@@ -47,7 +47,7 @@
   margin: 0;
   padding: 0;
   margin-left: 8.89rem;
-  margin-top: 163px;
+  margin-top: 98px;
 
   display: flex;
   width: 100%;
@@ -336,4 +336,146 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
+}
+
+/* новая секция */
+.container-for-footer {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 75rem;
+  padding-top: 5.875rem;
+  height: 40.1075rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3.0625rem;
+  background: #000;
+}
+.container-for-info {
+  margin: 0;
+  display: flex;
+  padding: 0 6.56rem 0 31.94rem;
+  align-items: flex-start;
+  gap: 12.375rem;
+  align-self: stretch;
+}
+.container-for-skinhair {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  max-width: 11.9375rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.item-skinhair {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.container-for-exsessinf {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  max-width: 15.1875rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.9375rem;
+}
+.container-for-login {
+  display: flex;
+  padding: 0.75rem 4.7325rem 0.8125rem 4.3125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-radius: 6.25rem;
+  background: #fff;
+  width: 100%;
+  max-width: 250px;
+}
+.text-login {
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35rem; /* 120% */
+}
+
+.container-for-images {
+  display: inline-grid;
+  column-gap: 340px;
+  align-self: stretch;
+  align-items: end;
+  grid-template-rows: repeat(1, 6.25rem);
+  grid-template-columns: fit-content(100%) fit-content(100%) minmax(0, 1fr);
+}
+.logotype {
+  width: 8.75rem;
+  height: 6.25rem;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+.flags {
+  width: 12.625rem;
+  height: 1.875rem;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+}
+.empty {
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.container-for-navigation {
+  display: grid;
+  height: 3.575rem;
+  flex-shrink: 0;
+  align-self: stretch;
+  align-items: start;
+  grid-template-rows: repeat(1, fit-content(100%));
+  grid-template-columns: minmax(0, 1fr) 410.33px 367px;
+  border-top: 1px solid #fffdfd;
+  background: rgba(255, 255, 255, 0);
+}
+.empty1 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 26.375rem;
+  max-height: 1.075rem;
+  align-items: flex-start;
+  align-self: start;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  justify-self: start;
+}
+.terms {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  flex-shrink: 0;
 }
