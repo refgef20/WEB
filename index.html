@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="newthreesection.css" />
     <link rel="stylesheet" href="nextthreesection.css" />
+    <!-- <link rel="stylesheet" media="(max-device-width:480px)" href=""> -->
   </head>
   <body>
     <header>
       <div class="container-for-list">
+        <div class="burger-menu">
+          <img src="images/menu-lines.svg" alt="" />
+        </div>
         <nav>
           <ul class="nav-list">
             <li><a class="nav-item" href="!#"> Acne</a></li>
@@ -28,16 +32,10 @@
 
         <!-- <div class="container-for-button"> -->
         <div class="container-for-button">
-          <button
-            class="button-login"
-            type="button"
-            style="font-size: 0.9375rem"
-          >
-            Log in
-          </button>
+          <button class="button-login" type="button">Log in</button>
         </div>
       </div>
-      <!-- </div> -->
+
       <div class="container-for-image">
         <div class="container-for-text">
           <p>Where science meets skincare.</p>
@@ -48,10 +46,10 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="sec1">
         <div class="container-images-woman">
-          <img src="images/woman2.png" width="568px" height="540px" alt="" />
-          <img src="images/woman3.png" width="568px" height="540px" alt="" />
+          <img class="img-woman23" src="images/woman2.png" alt="" />
+          <img class="img-woman23" src="images/woman3.png" alt="" />
           <div class="container-for-gif">
             <img width="261px" height="253px" src="images/drop.gif" alt="" />
             <img width="244px" height="295px" src="images/wild.gif" alt="" />
@@ -86,84 +84,89 @@
               <p class="item-first-card-mets">
                 Your custom prescription formula
               </p>
-              <p class="item-first-card-mets" style="font-size: 18px">
-                $88 every 8 weeks
-              </p>
+              <p class="item-first-card-mets1">$88 every 8 weeks</p>
               <div class="container-for-createformula">
                 <p class="itame-for-createformula">Create my formula</p>
+
                 <img src="images/errou.png" alt="" />
               </div>
             </div>
           </div>
           <div>
             <div class="container-for-every-card-mets">
-              <img src="images/acnekit.png" alt="" />
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/acnekit2.png"
+                />
+                <img
+                  style="display: block"
+                  class="acne"
+                  src="images/acnekit.png"
+                  alt=""
+                />
+              </picture>
+
               <p class="item-first-card-mets">The Acne Kit</p>
-              <p
-                class="item-first-card-mets"
-                style="font-size: 18px; margin-right: 17px; line-height: 21.6px"
-              >
+              <p class="item-first-card-mets1">
                 Meet the complete acne-fighting kit designed to target acne at
                 all stages.
               </p>
               <div class="container-for-button-for-last3cardmets">
                 <p class="itame-for-button-for-last3cardmets">Add to cart</p>
-                <p
-                  class="itame-for-button-for-last3cardmets"
-                  style="font-size: 18px"
-                >
-                  $140
-                </p>
+                <p class="itame-for-button-for-last3cardmets1">$140</p>
               </div>
             </div>
           </div>
           <div>
             <div class="container-for-every-card-mets">
-              <img src="images/Supplements.png" alt="" />
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/Supplements2.png"
+                />
+                <img
+                  style="display: block"
+                  class="acne"
+                  src="images/Supplements.png"
+                  alt=""
+                />
+              </picture>
+
               <p class="item-first-card-mets">Acne Supplement</p>
-              <p
-                class="item-first-card-mets"
-                style="font-size: 17px; line-height: 21.6px"
-              >
+              <p class="item-first-card-mets1_1">
                 Dermatologist-designed daily capsules that support skin health
                 and fight acne from the inside, out
               </p>
-              <div
-                class="container-for-button-for-last3cardmets"
-                style="gap: 98px"
-              >
+              <div class="container-for-button-for-last3cardmets1">
                 <p class="itame-for-button-for-last3cardmets">Add to cart</p>
-                <p
-                  class="itame-for-button-for-last3cardmets"
-                  style="font-size: 18px"
-                >
-                  $42
-                </p>
+                <p class="itame-for-button-for-last3cardmets1">$42</p>
               </div>
             </div>
           </div>
           <div>
-            <div class="container-for-every-card-mets" style="gap: 28px">
-              <img src="images/pimplepatch.png" alt="" />
+            <div class="container-for-every-card-mets">
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/pimplepatch2.png"
+                />
+                <img
+                  style="display: block"
+                  class="acne"
+                  src="images/pimplepatch.png"
+                  alt=""
+                />
+              </picture>
+
               <p class="item-first-card-mets">AHA/BHA Pimple Patches</p>
-              <p
-                class="item-first-card-mets"
-                style="font-size: 18px; line-height: 21.6px"
-              >
+              <p class="item-first-card-mets1_1">
                 Microdart pimple patches designed to penetrate pimples and kill
                 bacteria deep within the skin.
               </p>
-              <div
-                class="container-for-button-for-last3cardmets"
-                style="gap: 98px"
-              >
+              <div class="container-for-button-for-last3cardmets1">
                 <p class="itame-for-button-for-last3cardmets">Add to cart</p>
-                <p
-                  class="itame-for-button-for-last3cardmets"
-                  style="font-size: 18px"
-                >
-                  $39
-                </p>
+                <p class="itame-for-button-for-last3cardmets1">$39</p>
               </div>
             </div>
           </div>
@@ -178,7 +181,7 @@
         </div>
         <nav>
           <ul class="nav-list-problem">
-            <li class="first-button-problem" style="color: white">All</li>
+            <li class="first-button-problem">All</li>
             <li class="second-button-problem">Acne</li>
             <li class="thirst-button-problem">Texture</li>
             <li class="fourth-button-problem">Pigmentation</li>
@@ -186,63 +189,105 @@
           </ul>
         </nav>
         <div class="container-card-problem">
-          <div class="card-problem image-card-problem">
-            <img src="images/firstwoman.png" alt="" />
-            <img src="images/secondwoman.png" alt="" />
+          <div class="card-problem">
+            <div class="image-card-problem">
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/firstwoman1.png"
+                />
+                <img
+                  style="display: block"
+                  class="womans"
+                  src="images/firstwoman.png"
+                  alt=""
+                />
+              </picture>
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/secondwoman1.png"
+                />
+                <img
+                  style="display: block"
+                  class="womans"
+                  src="images/secondwoman.png"
+                  alt=""
+                />
+              </picture>
+            </div>
             <div class="container-item-card-problem">
-              <p
-                class="column-item-card-problem"
-                style="
-                  font-size: 16px;
-                  line-height: 0px;
-                  position: relative;
-                  bottom: 8px;
-                "
-              >
-                Laura, 32
-              </p>
+              <p class="column-item-card-problem">Laura, 32</p>
               <p class="column-item-card-problem country-item-card-problem">
                 Western Australia
               </p>
               <button class="button-problem">Pigmentation</button>
             </div>
           </div>
-          <div class="card-problem image-card-problem">
-            <img src="images/thirstimage.png" alt="" />
-            <img src="images/woman4.png" alt="" />
+          <div class="card-problem">
+            <div class="image-card-problem">
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/thirstimage1.png"
+                />
+                <img
+                  style="display: block"
+                  class="womans"
+                  src="images/thirstimage.png"
+                  alt=""
+                />
+              </picture>
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/woman4_1.png"
+                />
+                <img
+                  style="display: block"
+                  class="womans"
+                  src="images/woman4.png"
+                  alt=""
+                />
+              </picture>
+            </div>
             <div class="container-item-card-problem">
-              <p
-                class="column-item-card-problem"
-                style="
-                  font-size: 16px;
-                  line-height: 0px;
-                  position: relative;
-                  bottom: 8px;
-                "
-              >
-                Eliza, 33
-              </p>
+              <p class="column-item-card-problem">Eliza, 33</p>
               <p class="column-item-card-problem country-item-card-problem">
                 New South Wales
               </p>
               <button class="button-problem">Pigmentation</button>
             </div>
           </div>
-          <div class="card-problem image-card-problem">
-            <img src="images/woman5.png" alt="" />
-            <img src="images/woman6.png" alt="" />
-            <div class="container-item-card-problem" style="column-gap: 190px">
-              <p
-                class="column-item-card-problem"
-                style="
-                  font-size: 16px;
-                  line-height: 0px;
-                  position: relative;
-                  bottom: 8px;
-                "
-              >
-                Kristy, 43
-              </p>
+          <div class="card-problem">
+            <div class="image-card-problem">
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/woman5_1.png"
+                />
+                <img
+                  style="display: block"
+                  class="womans"
+                  src="images/woman5.png"
+                  alt=""
+                />
+              </picture>
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/womaan6_1.png"
+                />
+                <img
+                  style="display: block"
+                  class="womans"
+                  src="images/woman6.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="container-item-card-problem1">
+              <p class="column-item-card-problem">Kristy, 43</p>
               <p class="column-item-card-problem country-item-card-problem">
                 NSW
               </p>
@@ -251,21 +296,13 @@
               </button>
             </div>
           </div>
-          <div class="card-problem image-card-problem">
-            <img src="images/woman7.png" alt="" />
-            <img src="images/woman8.png" alt="" />
-            <div class="container-item-card-problem" style="column-gap: 216px">
-              <p
-                class="column-item-card-problem"
-                style="
-                  font-size: 16px;
-                  line-height: 0px;
-                  position: relative;
-                  bottom: 8px;
-                "
-              >
-                Andrea, 27
-              </p>
+          <div class="card-problem">
+            <div class="image-card-problem">
+              <img class="womans" src="images/woman7.png" alt="" />
+              <img class="womans" src="images/woman8.png" alt="" />
+            </div>
+            <div class="container-item-card-problem2">
+              <p class="column-item-card-problem">Andrea, 27</p>
               <p class="column-item-card-problem country-item-card-problem">
                 Sydney
               </p>
@@ -274,21 +311,13 @@
               </button>
             </div>
           </div>
-          <div class="card-problem image-card-problem">
-            <img src="images/woman9.png" alt="" />
-            <img src="images/woman10.png" alt="" />
-            <div class="container-item-card-problem" style="column-gap: 236px">
-              <p
-                class="column-item-card-problem"
-                style="
-                  font-size: 16px;
-                  line-height: 0px;
-                  position: relative;
-                  bottom: 8px;
-                "
-              >
-                Danielle
-              </p>
+          <div class="card-problem">
+            <div class="image-card-problem">
+              <img class="womans" src="images/woman9.png" alt="" />
+              <img class="womans" src="images/woman10.png" alt="" />
+            </div>
+            <div class="container-item-card-problem3">
+              <p class="column-item-card-problem">Danielle</p>
               <p class="column-item-card-problem country-item-card-problem">
                 Sydney
               </p>
@@ -297,21 +326,13 @@
               </button>
             </div>
           </div>
-          <div class="card-problem image-card-problem">
-            <img src="images/woman11.png" alt="" />
-            <img src="images/woman12.png" alt="" />
-            <div class="container-item-card-problem" style="column-gap: 195px">
-              <p
-                class="column-item-card-problem"
-                style="
-                  font-size: 15px;
-                  line-height: 0px;
-                  position: relative;
-                  bottom: 8px;
-                "
-              >
-                Tani, 27
-              </p>
+          <div class="card-problem">
+            <div class="image-card-problem">
+              <img class="womans" src="images/woman11.png" alt="" />
+              <img class="womans" src="images/woman12.png" alt="" />
+            </div>
+            <div class="container-item-card-problem4">
+              <p class="column-item-card-problem">Tani, 27</p>
               <p class="column-item-card-problem country-item-card-problem">
                 Brisbane
               </p>
@@ -319,8 +340,9 @@
             </div>
           </div>
         </div>
-        <button class="button-show" style="font-size: 16px">Show more</button>
+        <button class="button-show">Show more</button>
       </section>
+
       <section class="container-for-containerscreams">
         <p class="container-for-textingr">
           Ingredients you can’t get off the shelf
@@ -333,7 +355,7 @@
         <div class="container-for-containerscream">
           <div class="container-for-firstcreams">
             <div class="container-for-cream1">
-              <img src="images/retinoid.png" alt="" />
+              <img class="img-cream" src="images/retinoid.png" alt="" />
               <div class="container-for-text-cream1">
                 <p class="text-cream1">Retinoid</p>
                 <p class="text2-cream1">
@@ -346,7 +368,7 @@
             </div>
 
             <div class="container-for-cream1">
-              <img src="images/azelaic.png" alt="" />
+              <img class="img-cream" src="images/azelaic.png" alt="" />
               <div class="container-for-text-cream1">
                 <p class="text-cream1">Azelaic Acid</p>
                 <p class="text2-cream1">
@@ -359,7 +381,18 @@
           </div>
           <div class="container-for-secondcreams">
             <div class="container-for-cream2">
-              <img src="images/niacina.png" alt="" />
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/azelaic1.png"
+                />
+                <img
+                  style="display: block"
+                  class="img-cream"
+                  src="images/niacina.png"
+                  alt=""
+                />
+              </picture>
               <div class="container-for-text-cream2">
                 <p class="text-cream2">Niacinamide</p>
                 <p class="text2-cream2">
@@ -369,7 +402,7 @@
               </div>
             </div>
             <div class="container-for-cream2">
-              <img src="images/hyaluron.png" alt="" />
+              <img class="img-cream" src="images/hyaluron.png" alt="" />
               <div class="container-for-text-cream2">
                 <p class="text-cream2">Hyaluronic Acid</p>
                 <p class="text2-cream2" style="font-size: 1.125rem">
@@ -379,7 +412,7 @@
               </div>
             </div>
             <div class="container-for-cream2">
-              <img src="images/antibio.png" alt="" />
+              <img class="img-cream" src="images/antibio.png" alt="" />
               <div class="container-for-text-cream2">
                 <p class="text-cream2">Antibiotics</p>
                 <p class="text2-cream2">
@@ -391,10 +424,7 @@
             </div>
           </div>
         </div>
-        <button
-          class="button-for-cream"
-          style="font-size: 16px; transform: translateY(10%)"
-        >
+        <button class="button-for-cream" style="font-size: 16px">
           Read our ingredients bible
         </button>
       </section>
@@ -413,14 +443,7 @@
                 />
                 <p class="text2-pimple">by Caitlyn O'Brien on 11/8/2022</p>
               </div>
-              <p
-                style="
-                  font-size: 1.125rem;
-                  line-height: 1.35rem;
-                  margin: 0;
-                  padding: 0;
-                "
-              >
+              <p class="txt-rev">
                 I tried Software’s Pimple Patches and it was sooo satisfying to
                 use — it zapped my pimples and surprisingly stuck on the whole
                 night through. I used it on a pimple on my upper lip, and it
@@ -486,37 +509,21 @@
         </div>
       </section>
       <section>
-        <hr style="margin: 62px" />
         <div class="container-for-faqs">
           <p class="text-faqs">FAQs</p>
           <div class="container-for-questions">
-            <p
-              class="container-for-question"
-              style="font-size: 1.125rem; line-height: 1.25rem"
-            >
+            <p class="container-for-question">
               What is included in the consultation?
             </p>
-            <p
-              class="container-for-question"
-              style="font-size: 1.125rem; line-height: 1.25rem"
-            >
-              How much does it cost?
-            </p>
-            <p
-              class="container-for-question"
-              style="font-size: 1.125rem; line-height: 1.25rem"
-            >
+            <p class="container-for-question">How much does it cost?</p>
+            <p class="container-for-question">
               What makes Software “personalised”?
             </p>
-            <p
-              class="container-for-question"
-              style="font-size: 1.125rem; line-height: 1.25rem"
-            >
+            <p class="container-for-question">
               Can I use other skincare products with my Software treatment?
             </p>
           </div>
         </div>
-        <hr style="margin-top: 63px" />
       </section>
       <section>
         <div class="container-for-experts">
@@ -541,7 +548,19 @@
           </div>
           <div class="container-card-experts">
             <div class="container-woman-exp">
-              <img src="images/expertwoman.png" alt="" />
+              <picture style="display: block">
+                <source
+                  media="(max-width:321px)"
+                  srcset="images/expertwoman1.png"
+                />
+                <img
+                  style="display: block"
+                  class="img-woman"
+                  src="images/expertwoman.png"
+                  alt=""
+                />
+              </picture>
+
               <div class="container-text-expwoman">
                 <p class="text-exp">Dr. Hope Dinh</p>
                 <p class="text2-exp">Consultant Dermatologist, MBBS, FACD</p>
@@ -581,7 +600,7 @@
               </div>
               <div class="container-for-text-step">
                 <p class="text1-in-step">Use your personalised formula</p>
-                <p class="text2-in-step" style="font-size: 1.125rem">
+                <p class="text2-in-step1">
                   Your treatment will be delivered every two months.
                 </p>
               </div>
@@ -635,21 +654,26 @@
         </div>
 
         <div class="container-for-images">
-          <img src="images/logotype.png" alt="" />
-          <img src="images/flags.png" alt="" />
+          <picture>
+            <source media="(max-width:321px)" srcset="images/soft1.png" />
+            <img class="soft" src="images/logotype.png" alt="" />
+          </picture>
+          <picture>
+            <source media="(max-width:321px)" srcset="images/flags2.png" />
+            <img class="flag" src="images/flags.png" alt="" />
+          </picture>
+
           <div class="empty"></div>
         </div>
 
         <nav class="container-for-navigation">
           <div class="empty"></div>
           <ul class="navigation">
-            <li class="terms" style="width: 6.0625rem">Privacy Policy</li>
-            <li class="terms" style="width: 0.1875rem; font-size: 0.75">|</li>
-            <li class="terms" style="width: 7.2625rem">Terms & Conditions</li>
-            <li class="terms" style="width: 0.1875rem; font-size: 0.75">|</li>
-            <li class="terms" style="width: 12.6875rem">
-              Fulfilment, Shipping & Returns Policy
-            </li>
+            <li class="terms1">Privacy Policy</li>
+            <li class="terms2">|</li>
+            <li class="terms3">Terms & Conditions</li>
+            <li class="terms4">|</li>
+            <li class="terms5">Fulfilment, Shipping & Returns Policy</li>
           </ul>
           <div class="empty1"></div>
         </nav>
