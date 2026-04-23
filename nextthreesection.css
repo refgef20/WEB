@@ -555,6 +555,47 @@
   flex-shrink: 0;
   width: 12.6875rem;
 }
+
+@media screen and (max-width: 996px) {
+  .container-for-list {
+    grid-template-rows: 78px;
+    padding-left: clamp(1rem, 11vw, 8.05rem);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .nav-list {
+    gap: 1.45rem;
+    white-space: nowrap;
+  }
+  .container-for-mets {
+    height: auto;
+  }
+  .container-for-card-mets {
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+  .container-card-problem {
+    justify-content: center;
+  }
+  .container-for-reviews div:nth-child(3) {
+    display: none;
+  }
+  .container-for-stapecare {
+    justify-content: center;
+  }
+  .container-for-satrted {
+    padding: 7rem 15.25rem;
+  }
+  .container-for-info {
+    padding-left: 20.56rem;
+  }
+}
+@media screen and (max-width: 829px) {
+  .container-for-firstcreams {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 834px) {
   * {
     padding: 0;
@@ -658,7 +699,7 @@
     max-width: 52.0625rem;
     height: 100%;
     min-height: 92rem;
-    padding: 2.0375rem 0.0625rem 4.0625rem 0;
+    padding: 2.0375rem 0.0625rem 1.0625rem 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 2.5rem;
@@ -717,7 +758,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    padding: 0.8rem 0.0625rem 0 0;
+    padding: 0 0.0625rem 0 0;
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -800,8 +841,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    margin-top: 115px;
-    gap: 1.95rem;
+    margin-top: 105px;
+    gap: 2.15rem;
   }
   .container-for-containerscream {
     display: flex;
@@ -901,6 +942,138 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+@media screen and (max-width: 793px) {
+  .container-for-text {
+    font-size: 2.875rem;
+    line-height: 2.9rem;
+    font-weight: 400;
+    width: 100%;
+    min-width: 220px;
+  }
+
+  .container-for-text-in-text {
+    font-size: 0.925rem;
+    line-height: 1.25rem;
+    width: 100%;
+    min-width: 90px;
+    margin-top: -1.9rem;
+  }
+  .container-for-firstcreams {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 780px) {
+  .container-for-comments {
+    padding: 0 1.7rem;
+  }
+  .container-for-reviews {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-for-card-mets {
+    height: auto;
+  }
+}
+@media screen and (max-width: 709px) {
+  .container-for-list nav:nth-child(2) {
+    display: none;
+  }
+  .container-for-list div:nth-child(1) {
+    margin-right: 20px;
+    display: flex;
+  }
+  .container-for-button {
+    margin: 0;
+    padding: 0;
+  }
+  .container-for-list {
+    padding-top: 15px;
+    padding-left: 0.575rem;
+    grid-template-rows: 50px;
+  }
+  .container-images-woman {
+    padding: 0;
+    height: 100%;
+    min-height: auto;
+  }
+
+  .img-woman23 {
+    min-height: 320px;
+    max-width: 468px;
+    margin: 0 auto;
+    padding: 25px 5px 40px 5px;
+  }
+  .item-for-title-mets {
+    font-size: 33px;
+  }
+  .burger-menu {
+    width: 3.125rem;
+    height: 3.125rem;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    justify-self: start;
+  }
+  .container-for-text {
+    font-size: 2.875rem;
+    line-height: 2.9rem;
+    font-weight: 400;
+    width: 100%;
+    min-width: 330px;
+  }
+
+  .container-for-text-in-text {
+    font-size: 0.925rem;
+    line-height: 1.25rem;
+    width: 100%;
+    min-width: 90px;
+    margin-top: -1.9rem;
+  }
+  .title-problem-people {
+    max-height: none;
+  }
+  .nav-list-problem {
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+  }
+  .container-for-image {
+    margin: 0;
+  }
+  .container-for-firstcreams {
+    justify-content: center;
+  }
+  /* .container-for-mets {
+    min-height: 95rem;
+  } */
+}
+@media screen and (max-width: 634px) {
+  .container-for-info {
+    padding-left: 10.5rem;
+    gap: 2.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container-for-info {
+    padding-left: 4.7rem;
+    gap: 2rem;
+  }
+  .container-for-images {
+    gap: 100px;
+  }
+  .container-for-login {
+    padding: 12px 3.37rem;
+  }
+  .text-login {
+    font-size: 1rem;
+  }
+  .nav-bar-for-mets {
+    height: auto;
+  }
+  .container-for-text-cream1 {
+    padding: 0 0.15rem;
+  }
+}
+
 @media screen and (max-width: 321px) {
   .container-for-list nav:nth-child(2) {
     display: none;
@@ -920,7 +1093,7 @@
   }
   .container-for-button {
     margin: 0;
-    padding: 0;
+    padding-top: 1px;
   }
   .button-login {
     font-size: 8px;
@@ -939,12 +1112,13 @@
     max-height: 0;
     min-height: 24.275rem;
     padding-top: 7.875rem;
+    margin-top: 20px;
   }
   .container-for-text {
     font-size: 1.875rem;
     line-height: 2.5rem;
     font-weight: 400;
-    width: 220px;
+    min-width: 220px;
   }
   .container-for-text-in-text {
     font-size: 0.625rem;
@@ -953,17 +1127,17 @@
     margin-top: -1.9rem;
   }
   .container-images-woman {
-    max-height: 11.68rem;
-    min-height: 17.08rem;
+    max-height: 10.98rem;
+
     width: 100%;
-    max-width: 15.94rem;
+    max-width: 271px;
     padding: 0;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 151px;
   }
   .img-woman23 {
-    max-height: 17.08rem;
-    min-height: 11.68rem;
+    min-height: unset;
+    max-width: 365px;
   }
   .sec1 {
     min-height: 351px;
@@ -1249,7 +1423,7 @@
   }
   .tittle-comments {
     margin: 0;
-    margin-top: 2.6rem;
+    margin-top: 3.3rem;
     font-size: 30px;
     line-height: 47.6px;
     width: 100%;
