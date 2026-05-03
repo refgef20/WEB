@@ -1073,7 +1073,36 @@
     padding: 0 0.15rem;
   }
 }
-
+@media screen and (max-width: 361px) {
+  .title-for-mets {
+    width: auto;
+  }
+  .card-problem {
+    overflow: hidden;
+    max-width: 313px;
+  }
+  .container-item-card-problem1 {
+    column-gap: 160px;
+  }
+  .container-item-card-problem2 {
+    column-gap: 190px;
+  }
+  .container-item-card-problem3 {
+    column-gap: 209px;
+  }
+  .container-item-card-problem4 {
+    column-gap: 163px;
+  }
+  .container-for-text-cream1 {
+    width: auto;
+  }
+  .container-for-info {
+    padding-left: 0.2rem;
+  }
+  .container-for-images {
+    gap: 2px;
+  }
+}
 @media screen and (max-width: 321px) {
   .container-for-list nav:nth-child(2) {
     display: none;
@@ -1599,4 +1628,310 @@
     width: 9.13rem;
     font-size: 9px;
   }
+}
+
+.text-faqs::first-letter,
+.title-care::first-letter,
+.title-start::first-letter {
+  color: palevioletred;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+::selection {
+  background-color: #10a5ea;
+  color: palevioletred;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #10a5ea;
+  transition: width 0.3s ease-in-out;
+}
+.nav-item:hover::after {
+  width: 100%;
+}
+.nav-item {
+  transition:
+    opacity 0.4s ease,
+    filter 0.4s ease,
+    color 0.6s ease-in-out;
+}
+.nav-list:hover .nav-item:not(:hover) {
+  opacity: 0.4;
+  filter: blur(0.5px);
+}
+a {
+  transition: color 0.6s ease-in-out;
+}
+a:hover {
+  color: palevioletred;
+}
+
+.button-login {
+  animation: pulseShadow 2.5s infinite;
+}
+@keyframes pulseShadow {
+  from {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.195);
+  }
+  70% {
+    box-shadow: 0 0 0 5px rgba(8, 197, 244, 0.577);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(8, 197, 244, 0.765);
+  }
+}
+button {
+  transition: 0.4s ease-out;
+}
+button:hover {
+  transform: scale(1.2);
+}
+button:active {
+  transform: scale(0.43);
+}
+.button-login:focus-visible {
+  outline: 1px solid palevioletred;
+  outline-offset: 6px;
+  transform: scale(1.05);
+}
+.container-for-text {
+  animation: tittle 2s;
+}
+@keyframes tittle {
+  from {
+    margin-top: 100%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+.img-woman23 {
+  animation: womans 2s infinite alternate ease-in;
+}
+@keyframes womans {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.button-for-nav-second {
+  transition: background-color 0.4s cubic-bezier(0, 0.44, 0.82, 0.47);
+}
+.button-for-nav-second:hover {
+  background-color: black;
+}
+.button-for-nav-last3 {
+  transition: background-color 0.4s cubic-bezier(0, 0.44, 0.92, 0.47);
+}
+.button-for-nav-last3:hover {
+  background-color: black;
+}
+.first-content-card-mets {
+  transition: 0.5s ease-in-out;
+}
+.first-content-card-mets:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 0, 247, 0.572);
+  transform: scale(1.06);
+}
+.container-for-every-card-mets {
+  transition: 0.5s ease-in-out;
+}
+.container-for-every-card-mets:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 0, 247, 0.572);
+  transform: scale(1.06);
+}
+
+.nav-list-problem a {
+  text-decoration: none;
+  color: rgb(90, 88, 88);
+  transition: color 0.6s ease-in-out;
+}
+.nav-list-problem a:hover {
+  color: palevioletred;
+}
+.nav-list-problem li {
+  transition: background-color 0.4s cubic-bezier(0, 0.44, 0.92, 0.47);
+}
+.nav-list-problem li:hover {
+  background-color: #000000;
+}
+.title-problem-people {
+  animation: problem 2s ease-out;
+}
+@keyframes problem {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 28%;
+    opacity: 1;
+  }
+}
+.womans {
+  filter: brightness(0.8);
+  transition: filter 0.5s ease-out;
+}
+.womans:hover {
+  filter: brightness(1);
+}
+
+.container-for-cream2,
+.container-for-cream1 {
+  animation: floatCard 5s ease-in-out infinite;
+}
+.container-for-cream2:nth-child(even),
+.container-for-cream1:nth-child(even) {
+  animation-delay: 2.5s;
+}
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5%);
+  }
+}
+
+.container-for-question::before {
+  content: "Q:";
+  color: palevioletred;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+.container-for-question:hover::before {
+  transform: translateY(-3px) rotate(-10deg);
+}
+.container-for-comments {
+  overflow: hidden;
+}
+.container-for-question {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.container-for-question:hover {
+  transform: translateX(2.5%);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.147);
+}
+.container-for-question:first-of-type {
+  background-color: #f9f9f9;
+}
+.container-for-question:last-child {
+  border-color: #10a5ea;
+}
+
+.container-for-reviews {
+  display: flex;
+  width: max-content;
+  animation: scrollReviews 20s linear infinite;
+}
+.container-for-reviews:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollReviews {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.container-woman-exp {
+  transition: 0.4s ease-out;
+}
+.container-woman-exp:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 10px 15px 30px rgba(212, 0, 0, 0.15);
+}
+
+.itame-image-step img {
+  transition: transform 0.3s;
+}
+.card-step-care:hover .itame-image-step img {
+  animation: bounceIcon 0.6s cubic-bezier(0.28, 0.84, 0.42, 1) infinite
+    alternate;
+}
+@keyframes bounceIcon {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+.button-quiz {
+  position: relative;
+}
+.button-quiz::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.632),
+    transparent
+  );
+  transform: skewX(-10deg);
+  animation: shineButton 7s infinite;
+}
+@keyframes shineButton {
+  0% {
+    left: -100%;
+  }
+  20%,
+  100% {
+    left: 200%;
+  }
+}
+
+.item-skinhair {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+}
+.item-skinhair::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  color: #43ebeb;
+  transition:
+    left 0.3s ease,
+    opacity 0.3s ease;
+}
+.item-skinhair:hover {
+  transform: translateX(20px);
+  color: #43ebeb;
+}
+.item-skinhair:hover::before {
+  left: -25px;
+  opacity: 1;
 }

@@ -321,6 +321,7 @@ body {
   line-height: 57.6px;
 }
 .item-for-nav-mets-last3 {
+  text-decoration: none;
   color: #737373;
   font-family: Roboto;
   font-size: 17px;
@@ -330,6 +331,7 @@ body {
   letter-spacing: 0%;
 }
 .item-for-nav-mets-second {
+  text-decoration: none;
   color: #fff;
   font-family: Roboto;
   font-size: 17px;
@@ -354,6 +356,6 @@ body {
 }
 .button-for-nav-second {
   border-radius: 32px;
-  background: #000;
+  background: #f2f2f2;
   padding: 10px 20px 11px 17px;
 }
