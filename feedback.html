@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="catalog.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <script type="module" src="components.js"></script>
+    <script type="module" src="feedback.js"></script>
+  </head>
+  <body>
+    <site-header></site-header>
+    <main>
+      <section class="container-for-catalog" style="align-items: center">
+        <div class="form-wrapper">
+          <h2 class="form-title">Leave a Review</h2>
+          <form id="feedback-form" novalidate>
+            <!-- Выбор товара -->
+            <div class="input-group">
+              <label for="review-product">Select Product *</label>
+              <select
+                id="review-product"
+                style="
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid #ccc;
+                "
+                required
+              >
+                <option value="">-- Choose purchased product --</option>
+              </select>
+            </div>
+
+            <!-- Текст отзыва -->
+            <div class="input-group">
+              <label for="review-text">Your Review (Min 20 characters) *</label>
+              <textarea
+                id="review-text"
+                rows="5"
+                style="
+                  border-radius: 8px;
+                  border: 1px solid #ccc;
+                  padding: 10px;
+                "
+                required
+              ></textarea>
+              <small
+                id="char-counter"
+                style="color: #666; margin-top: 4px; font-size: 0.8rem"
+                >Symbols: 0</small
+              >
+            </div>
+
+            <button
+              type="submit"
+              id="feedback-submit-btn"
+              class="submit-btn"
+              disabled
+            >
+              Submit Review
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

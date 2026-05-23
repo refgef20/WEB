@@ -5,6 +5,41 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.container-for-button-catalog {
+  display: flex;
+  gap: 135px;
+  justify-content: flex-start;
+  border-radius: 90px;
+  align-items: center;
+  padding: 0 6px;
+  border: 2px solid black;
+}
+.container-for-button-catalog2 {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  border-radius: 90px;
+  align-items: center;
+  padding: 0 6px;
+  border: 2px solid black;
+}
+.container-buttons-amount {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.button-emo {
+  border-radius: 20px;
+}
+.container-for-button-catalog1 {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+
+  align-items: center;
+  padding: 0 6px;
+}
 .container-for-catalog {
   display: flex;
   margin: 0 auto;
@@ -71,4 +106,19 @@
   align-items: flex-start;
   gap: 25px;
   flex-wrap: wrap;
+}
+.buy-button-on-img {
+  top: 15px;
+  right: 15px;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  z-index: 10;
 }

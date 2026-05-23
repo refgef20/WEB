@@ -1,0 +1,258 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "NEOGEN",
+      "cost": 12,
+      "description": "Innovative nitrogen plasma rejuvenation device that uses the power of ionized gas (plasma) to deliver controlled stimulation to the skin.",
+      "category": "Acne",
+      "rating": 4.7,
+      "photo": "images/noegen.jpg"
+    },
+    {
+      "id": "2",
+      "name": "CORSX Centella Blemish Cream",
+      "cost": 22,
+      "description": "A classic for spot treatment of inflammation. It doesn't dry out the skin, unlike many pharmacy products.",
+      "category": "Acne",
+      "rating": 4.9,
+      "photo": "images/centella.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Dr.G Red Blemish Clear Soothing Cream",
+      "cost": 34,
+      "description": "A light, soothing gel-cream containing a complex of 10 types of centella. It effectively relieves irritation.",
+      "category": "Acne",
+      "rating": 4.9,
+      "photo": "images/red.webp"
+    },
+    {
+      "id": "4",
+      "name": "Axis-Y Dark Spot Correcting Glow Serum",
+      "cost": 20,
+      "description": "A highly effective serum formulated with 5% niacinamide and squalane. It corrects dark spots.",
+      "category": "Pigmentation",
+      "rating": 4.8,
+      "photo": "images/axis_y.webp"
+    },
+    {
+      "id": "5",
+      "name": "Goodal Green Tangerine Vita C Serum",
+      "cost": 28,
+      "description": "Packed with 70% green tangerine extract, this gentle vitamin C serum effectively fades acne scars and hyperpigment without irritation.",
+      "category": "Pigmentation",
+      "rating": 4.7,
+      "photo": "images/goodal_vitac.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Hada Labo Shirojyun Premium Lotion",
+      "cost": 18,
+      "description": "Contains tranexamic acid and nano-hyaluronic acid to deeply hydrate the skin while actively fading sun spots and preventing future pigment.",
+      "category": "Pigmentation",
+      "rating": 4.9,
+      "photo": "images/hadalabo.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Some By Mi Cica Peptide Anti Hair Loss Tonic",
+      "cost": 15,
+      "description": "A cooling scalp tonic enriched with peptides and cica extract to soothe the scalp, nourish hair roots, and significantly reduce hair fallout.",
+      "category": "Hair loss",
+      "rating": 4.6,
+      "photo": "images/somebymi_tonic.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Aromatica Rosemary Root Enhancer",
+      "cost": 24,
+      "description": "A direct-to-scalp spray powered by essential oils and rosemary extract to stimulate hair follicles, promote growth, and strengthen weak roots.",
+      "category": "Hair loss",
+      "rating": 4.8,
+      "photo": "images/aromatica.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Lador Dermatical Active Ampoule",
+      "cost": 26,
+      "description": "Highly concentrated ampoules with salicylic acid, panthenol, and peptides to deeply exfoliate the scalp, clear build-up, and boost hair density.",
+      "category": "Hair loss",
+      "rating": 4.7,
+      "photo": "images/lador_ampoule.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Paula's Choice 1% Retinol Treatment",
+      "cost": 58,
+      "description": "A potent anti-aging serum with 1% retinol and peptides to visibly reduce fine lines, wrinkles, and uneven skin tone.",
+      "category": "Ageing",
+      "rating": 4.8,
+      "photo": "https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "11",
+      "name": "Drunk Elephant Polypeptide Cream",
+      "cost": 68,
+      "description": "A protein-rich moisturizer that combines signal peptides and growth factors to improve skin tone, texture, and firmness.",
+      "category": "Ageing",
+      "rating": 4.9,
+      "photo": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "12",
+      "name": "Estee Lauder Advanced Night Repair Eye",
+      "cost": 64,
+      "description": "A supercharged eye gel-cream that targets dark circles, fine lines, and signs of aging around the delicate eye area.",
+      "category": "Ageing",
+      "rating": 4.7,
+      "photo": "https://images.unsplash.com/photo-1615397323861-f09b55588cc2?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "13",
+      "name": "CeraVe Hydrating Facial Cleanser",
+      "cost": 16,
+      "description": "A gentle, non-foaming daily cleanser with ceramides and hyaluronic acid that cleanses without disrupting the skin barrier.",
+      "category": "Everyday care",
+      "rating": 4.9,
+      "photo": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "14",
+      "name": "Beauty of Joseon Relief Sun: Rice + Probiotics",
+      "cost": 18,
+      "description": "A lightweight, creamy organic sunscreen that provides high UV protection while nourishing the skin with rice extract.",
+      "category": "Everyday care",
+      "rating": 4.8,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnK4yNbyHMfOVte-DujPeLF5zSn7cuorfn1Q&s"
+    },
+    {
+      "id": "15",
+      "name": "Illiyoon Ceramide Ato Concentrate Cream",
+      "cost": 22,
+      "description": "A deeply hydrating, fragrance-free face and body cream designed to soothe and repair dry, sensitive skin for daily use.",
+      "category": "Everyday care",
+      "rating": 4.7,
+      "photo": "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "firstName": "Иван",
+      "lastName": "Админов",
+      "patronymic": "Сергеевич",
+      "phone": "+375291111111",
+      "email": "admin@design.by",
+      "birthDate": "1990-01-01",
+      "username": "admin",
+      "password": "Admin@1234",
+      "role": "admin"
+    },
+    {
+      "id": "u2",
+      "firstName": "Петр",
+      "lastName": "Клиентов",
+      "patronymic": "Игоревич",
+      "phone": "+375292222222",
+      "email": "client@design.by",
+      "birthDate": "2000-05-15",
+      "username": "client1",
+      "password": "Client@1234",
+      "role": "client"
+    },
+    {
+      "firstName": "Nbdshba",
+      "lastName": "Lnjjsbdakbdsa",
+      "patronymic": "KDOSJDJidjwd",
+      "phone": "+375295413268",
+      "email": "cecdcd@gmail.com",
+      "birthDate": "2002-06-05",
+      "username": "NLn428",
+      "password": "Gen@65uf94zu!",
+      "role": "client",
+      "id": "v-eQg4NNFBc"
+    }
+  ],
+  "favorites": [
+    {
+      "userId": "u2",
+      "productId": "2",
+      "name": "CORSX Centella Blemish Cream",
+      "cost": 22,
+      "description": "A classic for spot treatment of inflammation. It doesn't dry out the skin, unlike many pharmacy products.",
+      "photo": "images/centella.jpg",
+      "id": "-y-nK96fuZw"
+    },
+    {
+      "userId": "u1",
+      "productId": "4",
+      "name": "Axis-Y Dark Spot Correcting Glow Serum",
+      "cost": 20,
+      "description": "A highly effective serum formulated with 5% niacinamide and squalane. It corrects dark spots.",
+      "photo": "images/axis_y.webp",
+      "id": "xoa-mBKICqk"
+    },
+    {
+      "userId": "u1",
+      "productId": "2",
+      "name": "CORSX Centella Blemish Cream",
+      "cost": 22,
+      "description": "A classic for spot treatment of inflammation. It doesn't dry out the skin, unlike many pharmacy products.",
+      "photo": "images/centella.jpg",
+      "id": "-6pSkID6ZO0"
+    }
+  ],
+  "cart": [
+    {
+      "userId": "u2",
+      "productId": "2",
+      "name": "CORSX Centella Blemish Cream",
+      "cost": 22,
+      "description": "A classic for spot treatment of inflammation. It doesn't dry out the skin, unlike many pharmacy products.",
+      "photo": "images/centella.jpg",
+      "amount": 1,
+      "id": "pCz-D0GlH4E"
+    },
+    {
+      "userId": "u1",
+      "productId": "2",
+      "name": "CORSX Centella Blemish Cream",
+      "cost": 22,
+      "description": "A classic for spot treatment of inflammation. It doesn't dry out the skin, unlike many pharmacy products.",
+      "photo": "images/centella.jpg",
+      "amount": 2,
+      "id": "qZMfrbaWz2E"
+    }
+  ],
+  "orders": [
+    {
+      "userId": "u2",
+      "items": [
+        {
+          "productId": "3",
+          "name": "Dr.G Red Blemish Clear Soothing Cream",
+          "cost": 34,
+          "amount": 1
+        }
+      ],
+      "date": "23.05.2026",
+      "id": "cMt-IDNwVKU"
+    },
+    {
+      "userId": "u2",
+      "items": [
+        {
+          "productId": "2",
+          "name": "CORSX Centella Blemish Cream",
+          "cost": 22,
+          "amount": 1
+        }
+      ],
+      "date": "23.05.2026",
+      "id": "k8hL3wJXipM"
+    }
+  ],
+  "feedback": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

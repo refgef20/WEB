@@ -1,5 +1,20 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    let authSection = `<button class="button-login" id="login-nav-btn">Log in</button>`;
+    let adminLink = "";
+    if (currentUser) {
+      authSection = `
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 0.9rem; font-weight: 500; color: #333;">@${currentUser.username}</span>
+          <button class="button-login" id="logout-btn" style="width: auto; padding: 0 12px;">Exit</button>
+        </div>
+      `;
+      if (currentUser.role === "admin") {
+        adminLink = `<li><a class="nav-item" href="admin.html" style="color: palevioletred; font-weight: bold;">Admin</a></li>`;
+      }
+    }
+
     this.innerHTML = `
       <header>
         <div class="container-for-list">
@@ -8,21 +23,35 @@ class SiteHeader extends HTMLElement {
           </div>
           <nav>
             <ul class="nav-list">
-              <li><a class="nav-item" href="!#"> Acne</a></li>
-              <li><a class="nav-item" href="!#">Ageing</a></li>
-              <li><a class="nav-item" href="!#">Pigmentation</a></li>
-              <li><a class="nav-item" href="!#">Everyday care</a></li>
-              <li><a class="nav-item" href="!#">Hair loss</a></li>
-              <li><a class="nav-item" href="index.html">Main</a></li> 
+              <li><a class="nav-item" href="index.html">Main</a></li>
+               <li><a class="nav-item" href="catalog.html">Catalog</a></li>
+               <li><a class="nav-item" href="cart.html">Cart</a></li> 
+                <li><a class="nav-item" href="favorites.html">Favorites</a></li> 
+                 <li><a class="nav-item" href="feedback.html">Leave Review</a></li> 
+              ${adminLink}
             </ul>
           </nav>
 
           <div class="container-for-button">
-            <button class="button-login" type="button">Log in</button>
+             ${authSection}
           </div>
         </div>
       </header>
     `;
+    const logoutBtn = this.querySelector("#logout-btn");
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        location.href = "index.html";
+      });
+    }
+
+    const loginNavBtn = this.querySelector("#login-nav-btn");
+    if (loginNavBtn) {
+      loginNavBtn.addEventListener("click", () => {
+        location.href = "auth.html";
+      });
+    }
   }
 }
 
@@ -51,7 +80,6 @@ class SiteFooter extends HTMLElement {
                 <li class="item-skinhair">Skin Journal</li>
                 <li class="item-skinhair">Support Centre</li>
                 <li class="item-skinhair">Contact Us</li>
-                <button class="container-for-login text-login">Log in</button>
               </ul>
             </nav>
           </div>
