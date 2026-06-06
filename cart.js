@@ -169,9 +169,3 @@ async function UpdateAmount(id, amount) {
 }
 
 loadProduct();
-
-// const section = document.querySelector(".container-for-catalog");
-// const container = document.createElement("div");
-// container.className = "container-for-catalog-cards";
-// section.appendChild(container);
-// loadProduct();

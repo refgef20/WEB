@@ -96,7 +96,6 @@ function translit(text) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Переключение вкладок
   const tabLogin = document.getElementById("tab-login-btn");
   const tabRegister = document.getElementById("tab-register-btn");
   const loginFormContainer = document.getElementById("login-form-container");
@@ -118,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loginFormContainer.classList.add("hidden");
   });
 
-  // Элементы формы регистрации
   const regForm = document.getElementById("register-form");
   const lastNameInput = document.getElementById("reg-lastname");
   const firstNameInput = document.getElementById("reg-firstname");
@@ -141,18 +139,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const agreementCheckbox = document.getElementById("reg-agreement");
   const registerSubmitBtn = document.getElementById("register-submit-btn");
 
-  // Запретить вставку в поле подтверждения пароля
   confirmPasswordInput.addEventListener("paste", (e) => {
     e.preventDefault();
     showError(confirmPasswordInput, "Вставка пароля запрещена!");
   });
 
-  // Логика выбора способа пароля
   passModeRadio.forEach((radio) => {
     radio.addEventListener("change", (e) => {
       if (e.target.value === "auto") {
         manualPasswordFields.classList.add("hidden");
         autoPasswordInfo.classList.remove("hidden");
+
+        hideError(passwordInput);
+        hideError(confirmPasswordInput);
       } else {
         manualPasswordFields.classList.remove("hidden");
         autoPasswordInfo.classList.add("hidden");
@@ -161,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Ошибки динамической валидации
   function showError(input, text) {
     let errorSpan = input.parentNode.querySelector(".error-message");
     if (!errorSpan) {
@@ -180,8 +178,124 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Скрытие ошибок при вводе
-  [
+  function validateField(input, show = true) {
+    let isValid = true;
+    let errorMsg = "";
+
+    if (input === lastNameInput) {
+      if (!lastNameInput.value.trim()) {
+        isValid = false;
+        errorMsg = "Фамилия обязательна к заполнению";
+      }
+    } else if (input === firstNameInput) {
+      if (!firstNameInput.value.trim()) {
+        isValid = false;
+        errorMsg = "Имя обязательно к заполнению";
+      }
+    } else if (input === phoneInput) {
+      const val = phoneInput.value.trim();
+      const phoneRegex = /^\+375(25|29|33|44|17)\d{7}$/;
+      if (!val) {
+        isValid = false;
+        errorMsg = "Номер телефона обязателен";
+      } else if (!phoneRegex.test(val)) {
+        isValid = false;
+        errorMsg =
+          "Некорректный номер РБ. Пример: +375XXXXXXXXX (25, 29, 33, 44, 17)";
+      }
+    } else if (input === emailInput) {
+      const val = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!val) {
+        isValid = false;
+        errorMsg = "Email обязателен к заполнению";
+      } else if (!emailRegex.test(val)) {
+        isValid = false;
+        errorMsg = "Неверный формат email адреса";
+      }
+    } else if (input === birthdateInput) {
+      const val = birthdateInput.value;
+      if (!val) {
+        isValid = false;
+        errorMsg = "Укажите дату рождения";
+      } else {
+        const bDate = new Date(val);
+        const today = new Date();
+        let age = today.getFullYear() - bDate.getFullYear();
+        const m = today.getMonth() - bDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < bDate.getDate())) {
+          age--;
+        }
+        if (age < 16) {
+          isValid = false;
+          errorMsg = "Регистрация разрешена только с 16 лет";
+        }
+      }
+    } else if (input === usernameInput) {
+      if (!usernameInput.value.trim()) {
+        isValid = false;
+        errorMsg = "Никнейм обязателен к генерации";
+      }
+    } else if (input === passwordInput) {
+      const isManual =
+        document.querySelector('input[name="pass-mode"]:checked').value ===
+        "manual";
+      if (isManual) {
+        const pass = passwordInput.value;
+        const hasUpper = /[A-Z]/.test(pass);
+        const hasLower = /[a-z]/.test(pass);
+        const hasDigit = /\d/.test(pass);
+        const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(pass);
+        const isTooShortOrLong = pass.length < 8 || pass.length > 20;
+        const isCommon = TOP_100_PASSWORDS_2024.includes(pass);
+
+        if (!pass) {
+          isValid = false;
+          errorMsg = "Пароль обязателен к заполнению";
+        } else if (isTooShortOrLong) {
+          isValid = false;
+          errorMsg = "Пароль должен содержать от 8 до 20 символов";
+        } else if (!hasUpper || !hasLower || !hasDigit || !hasSpecial) {
+          isValid = false;
+          errorMsg =
+            "Пароль должен содержать заглавную и строчную буквы, цифру и спецсимвол";
+        } else if (isCommon) {
+          isValid = false;
+          errorMsg = "Этот пароль слишком простой и распространенный";
+        }
+      }
+    } else if (input === confirmPasswordInput) {
+      const isManual =
+        document.querySelector('input[name="pass-mode"]:checked').value ===
+        "manual";
+      if (isManual) {
+        const pass = passwordInput.value;
+        const confirm = confirmPasswordInput.value;
+        if (!confirm) {
+          isValid = false;
+          errorMsg = "Подтвердите ваш пароль";
+        } else if (pass !== confirm) {
+          isValid = false;
+          errorMsg = "Пароли не совпадают";
+        }
+      }
+    } else if (input === agreementCheckbox) {
+      if (!agreementCheckbox.checked) {
+        isValid = false;
+        errorMsg = "Необходимо подтвердить согласие";
+      }
+    }
+
+    if (!isValid && show) {
+      showError(input, errorMsg);
+    } else if (isValid) {
+      hideError(input);
+    }
+
+    return isValid;
+  }
+
+  const inputsToTrack = [
     lastNameInput,
     firstNameInput,
     phoneInput,
@@ -190,14 +304,23 @@ document.addEventListener("DOMContentLoaded", () => {
     passwordInput,
     confirmPasswordInput,
     agreementCheckbox,
-  ].forEach((el) => {
+    usernameInput,
+  ];
+
+  inputsToTrack.forEach((el) => {
     el.addEventListener("input", () => {
       hideError(el);
       validateForm();
     });
+
+    const blurEvent =
+      el.type === "checkbox" || el.type === "date" ? "change" : "blur";
+    el.addEventListener(blurEvent, () => {
+      validateField(el, true);
+      validateForm();
+    });
   });
 
-  // Генерация никнейма
   generateNickBtn.addEventListener("click", async () => {
     const fName = firstNameInput.value.trim();
     const lName = lastNameInput.value.trim();
@@ -211,7 +334,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nicknameAttempts < 5) {
       const generated = makeNickname(fName, lName);
 
-      // Проверяем уникальность
       const response = await fetch(
         `http://localhost:3000/users?username=${generated}`,
       );
@@ -252,76 +374,21 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${f}${l}${num}${Math.random() > 0.5 ? suf : ""}`;
   }
 
-  // Общая валидация формы
   function validateForm() {
-    let isValid = true;
+    let isFormValid = true;
 
-    if (!lastNameInput.value.trim()) isValid = false;
-    if (!firstNameInput.value.trim()) isValid = false;
-
-    // Беларусь (РБ) телефон +375(25/29/33/44/17)XXXXXXX
-    const phoneRegex = /^\+375(25|29|33|44|17)\d{7}$/;
-    if (!phoneRegex.test(phoneInput.value.trim())) isValid = false;
-
-    // Email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.value.trim())) isValid = false;
-
-    // Дата рождения 16+ лет
-    if (birthdateInput.value) {
-      const bDate = new Date(birthdateInput.value);
-      const today = new Date();
-      let age = today.getFullYear() - bDate.getFullYear();
-      const m = today.getMonth() - bDate.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < bDate.getDate())) {
-        age--;
+    inputsToTrack.forEach((input) => {
+      if (!validateField(input, false)) {
+        isFormValid = false;
       }
-      if (age < 16) isValid = false;
-    } else {
-      isValid = false;
-    }
+    });
 
-    // Никнейм
-    if (!usernameInput.value.trim()) isValid = false;
-
-    // Пароль
-    const isManual =
-      document.querySelector('input[name="pass-mode"]:checked').value ===
-      "manual";
-    if (isManual) {
-      const pass = passwordInput.value;
-      const confirm = confirmPasswordInput.value;
-
-      const hasUpper = /[A-Z]/.test(pass);
-      const hasLower = /[a-z]/.test(pass);
-      const hasDigit = /\d/.test(pass);
-      const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(pass);
-      const isTooShortOrLong = pass.length < 8 || pass.length > 20;
-      const isCommon = TOP_100_PASSWORDS_2024.includes(pass);
-
-      if (
-        isTooShortOrLong ||
-        !hasUpper ||
-        !hasLower ||
-        !hasDigit ||
-        !hasSpecial ||
-        isCommon ||
-        pass !== confirm
-      ) {
-        isValid = false;
-      }
-    }
-
-    if (!agreementCheckbox.checked) isValid = false;
-
-    registerSubmitBtn.disabled = !isValid;
+    registerSubmitBtn.disabled = !isFormValid;
   }
 
-  // Отправка регистрации
   regForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Финальная проверка на существование никнейма в бд
     const checkUser = await fetch(
       `http://localhost:3000/users?username=${usernameInput.value.trim()}`,
     );

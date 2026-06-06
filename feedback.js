@@ -18,13 +18,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const feedbackSubmitBtn = document.getElementById("feedback-submit-btn");
   const feedbackForm = document.getElementById("feedback-form");
 
-  // Подгружаем историю заказов пользователя для определения купленных товаров
   const ordersResponse = await fetch(
     `http://localhost:3000/orders?userId=${currentUser.id}`,
   );
   const orders = await ordersResponse.json();
 
-  // Вычленяем уникальные купленные товары
   const purchasedProductIds = new Set();
   orders.forEach((order) => {
     if (order.items && Array.isArray(order.items)) {
@@ -34,11 +32,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // Загружаем полный каталог товаров
   const productsResponse = await fetch("http://localhost:3000/products");
   const products = await productsResponse.json();
 
-  // Наполняем селект только купленными продуктами
   products.forEach((p) => {
     if (purchasedProductIds.has(p.id)) {
       const opt = document.createElement("option");

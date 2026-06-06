@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="catalog.css" />
+    <link rel="stylesheet" href="newthreesection.css" />
+    <link rel="stylesheet" href="nextthreesection.css" />
     <link rel="stylesheet" href="auth.css" />
     <script type="module" src="components.js"></script>
     <script type="module" src="feedback.js"></script>
@@ -17,9 +19,8 @@
         <div class="form-wrapper">
           <h2 class="form-title">Leave a Review</h2>
           <form id="feedback-form" novalidate>
-            <!-- Выбор товара -->
             <div class="input-group">
-              <label for="review-product">Select Product *</label>
+              <label for="review-product">Select Product*</label>
               <select
                 id="review-product"
                 style="
@@ -29,11 +30,10 @@
                 "
                 required
               >
-                <option value="">-- Choose purchased product --</option>
+                <option value="">Choose purchased product</option>
               </select>
             </div>
 
-            <!-- Текст отзыва -->
             <div class="input-group">
               <label for="review-text">Your Review (Min 20 characters) *</label>
               <textarea

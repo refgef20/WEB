@@ -21,7 +21,7 @@
           <button id="tab-register-btn" class="tab-btn">Register</button>
         </div>
 
-        <!-- Форма Авторизации -->
+
         <div id="login-form-container" class="form-wrapper">
           <h2 class="form-title">Authorization</h2>
           <form id="login-form" novalidate>
@@ -37,43 +37,42 @@
           </form>
         </div>
 
-        <!-- Форма Регистрации -->
+
         <div id="register-form-container" class="form-wrapper hidden">
           <h2 class="form-title">Registration</h2>
           <form id="register-form" novalidate>
-            <!-- ФИО (три отдельных поля) -->
+
             <div class="input-group">
-              <label for="reg-lastname">Last Name (Фамилия) *</label>
+              <label for="reg-lastname">Last Name*</label>
               <input type="text" id="reg-lastname" required />
             </div>
             <div class="input-group">
-              <label for="reg-firstname">First Name (Имя) *</label>
+              <label for="reg-firstname">First Name*</label>
               <input type="text" id="reg-firstname" required />
             </div>
             <div class="input-group">
-              <label for="reg-patronymic">Patronymic (Отчество)</label>
+              <label for="reg-patronymic">Patronymic</label>
               <input type="text" id="reg-patronymic" />
             </div>
 
-            <!-- Телефон (РБ) -->
+
             <div class="input-group">
               <label for="reg-phone">Phone Number (Belarus, e.g. +375XXXXXXXXX) *</label>
               <input type="tel" id="reg-phone" placeholder="+375291234567" required />
             </div>
 
-            <!-- Email -->
+
             <div class="input-group">
               <label for="reg-email">Email Address *</label>
               <input type="email" id="reg-email" placeholder="example@domain.com" required />
             </div>
 
-            <!-- Дата рождения -->
             <div class="input-group">
               <label for="reg-birthdate">Date of Birth (Must be 16+) *</label>
               <input type="date" id="reg-birthdate" required />
             </div>
 
-            <!-- Никнейм -->
+
             <div class="input-group">
               <label for="reg-username">Nickname *</label>
               <div class="nickname-control">
@@ -83,7 +82,7 @@
               <small id="nick-attempts-info" style="color: #666; font-size: 0.8rem;"></small>
             </div>
 
-            <!-- Способ задания пароля -->
+
             <div class="input-group">
               <label>Password Creation Mode *</label>
               <div class="radio-group">
@@ -111,7 +110,7 @@
               <p>Your password will be generated automatically upon successful submission.</p>
             </div>
 
-            <!-- Соглашение -->
+
             <div class="input-group checkbox-group">
               <input type="checkbox" id="reg-agreement" required />
               <label for="reg-agreement">I have read and agree to the <a href="#" id="agreement-link">User Agreement</a> *</label>
