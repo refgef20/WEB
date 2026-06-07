@@ -16,12 +16,20 @@ class SiteHeader extends HTMLElement {
     }
 
     this.innerHTML = `
+     <div id="preloader" class="preloader">
+  
+        <div class="preloader-spinner"></div>
+    
+</div>
       <header>
         <div class="container-for-list">
           <div class="burger-menu">
-            <img src="images/menu-lines.svg" alt="" />
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <nav>
+          <div class="menu-overlay"></div>
+          <nav class="nav-menu">
             <ul class="nav-list">
               <li><a class="nav-item" href="index.html">Main</a></li>
                <li><a class="nav-item" href="catalog.html">Catalog</a></li>
@@ -31,13 +39,59 @@ class SiteHeader extends HTMLElement {
               ${adminLink}
             </ul>
           </nav>
-
           <div class="container-for-button">
              ${authSection}
           </div>
         </div>
       </header>
     `;
+    const burger = this.querySelector(".burger-menu");
+    const navMenu = this.querySelector(".nav-menu");
+    const navList = this.querySelector(".nav-list");
+    const overlay = this.querySelector(".menu-overlay");
+    const butt = this.querySelector(".container-for-button");
+    const containerList = this.querySelector(".container-for-list");
+    const toggleMenu = () => {
+      const isOpen = burger.classList.toggle("open");
+      navMenu.classList.toggle("active");
+      overlay.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+    };
+
+    if (burger && navMenu && overlay) {
+      burger.addEventListener("click", toggleMenu);
+      overlay.addEventListener("click", toggleMenu);
+    }
+
+    if (window.innerWidth > 709) {
+      if (containerList && butt) {
+        containerList.appendChild(butt);
+      }
+      if (burger && navMenu && overlay) {
+        burger.classList.remove("open");
+        navMenu.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      }
+    } else {
+      navList.appendChild(butt);
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 709) {
+        if (containerList && butt) {
+          containerList.appendChild(butt);
+        }
+        if (burger && navMenu && overlay) {
+          burger.classList.remove("open");
+          navMenu.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        }
+      } else {
+        navList.appendChild(butt);
+      }
+    });
+
     const logoutBtn = this.querySelector("#logout-btn");
     if (logoutBtn) {
       logoutBtn.addEventListener("click", () => {

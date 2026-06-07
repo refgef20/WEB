@@ -1,7 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+html:has(body.no-scroll),
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #010101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+.preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.preloader-spinner {
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgba(255, 255, 255, 0.08);
+  border-top: 3px solid #167162;
+  border-radius: 50%;
+  animation: spinLoader 1s linear infinite;
+}
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .container-for-faqs {
   margin: 0 auto;
-  /* margin-top: 120px; */
   display: flex;
   width: 100%;
   height: 100%;
@@ -555,7 +598,9 @@
   flex-shrink: 0;
   width: 12.6875rem;
 }
-
+.burger-menu {
+  display: none;
+}
 @media screen and (max-width: 996px) {
   .container-for-list {
     grid-template-rows: 78px;
@@ -975,9 +1020,10 @@
   }
 }
 @media screen and (max-width: 709px) {
-  .container-for-list nav:nth-child(2) {
-    display: none;
+  .container-for-list nav {
+    display: none !important;
   }
+
   .container-for-list div:nth-child(1) {
     margin-right: 20px;
     display: flex;
@@ -1006,13 +1052,101 @@
   .item-for-title-mets {
     font-size: 33px;
   }
-  .burger-menu {
-    width: 3.125rem;
-    height: 3.125rem;
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
-    justify-self: start;
+
+  .menu-overlay {
+    display: block; /* Делаем элемент активным в потоке */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Затемнение фона */
+    backdrop-filter: blur(8px); /* Размытие заднего фона */
+    -webkit-backdrop-filter: blur(8px); /* Поддержка для iOS Safari */
+    z-index: 998; /* Слой строго под выплывающим меню, но над контентом */
+
+    /* Изначально скрываем оверлей плавным исчезновением */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
   }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 1.725rem;
+    height: 3.125rem;
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: end;
+    z-index: 1000;
+  }
+  .menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .burger-menu > span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition:
+      transform 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+  }
+  .burger-menu.open span:nth-child(2) {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  .burger-menu.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .burger-menu.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .container-for-list nav.nav-menu {
+    display: block;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 320px;
+
+    background-color: #ffffff;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .container-for-list nav.nav-menu.active {
+    display: block !important;
+    position: fixed; /* Выводим меню из сетки грида поверх страницы */
+    top: 0;
+    right: 0; /* Прижимаем к правому краю */
+    width: 75%; /* Занимает 75% экрана */
+    max-width: 320px; /* Ограничение по ширине */
+    height: 100vh; /* На всю высоту экрана */
+    background-color: #ffffff;
+    z-index: 999; /* Поверх размытого фона */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+
+    /* Начальное положение для анимации (сдвинуто вправо за экран) */
+    transform: translateX(100%);
+    /* Плавное выдвижение слева направо */
+    animation: slideInMenu 0.4s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes slideInMenu {
+    to {
+      transform: translateX(0);
+    }
+  }
+  .container-for-list nav.nav-menu.active .nav-list {
+    flex-direction: column;
+    align-items: start;
+    padding: 80px 30px 30px 30px;
+    gap: 20px;
+    height: 100%;
+  }
+
   .container-for-text {
     font-size: 2.875rem;
     line-height: 2.9rem;
