@@ -17,9 +17,10 @@ class SiteHeader extends HTMLElement {
 
     this.innerHTML = `
      <div id="preloader" class="preloader">
-  
+    <div class="preloader-content">
+
         <div class="preloader-spinner"></div>
-    
+    </div>
 </div>
       <header>
         <div class="container-for-list">
@@ -129,12 +130,15 @@ class SiteFooter extends HTMLElement {
               </ul>
             </nav>
             <nav>
-              <ul class="container-for-exsessinf">
-                <li class="item-skinhair">Ingredients</li>
-                <li class="item-skinhair">Skin Journal</li>
-                <li class="item-skinhair">Support Centre</li>
-                <li class="item-skinhair">Contact Us</li>
-              </ul>
+             
+            <iframe 
+              src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%201812%20%D0%B3%D0%BE%D0%B4%D0%B0%2C%20%D0%B4%D0%BE%D0%BC%201&z=16" 
+              width="100%" 
+              height="250" 
+              style="border:0; border-radius: 8px;" 
+              allowfullscreen="true">
+            </iframe>
+  
             </nav>
           </div>
 

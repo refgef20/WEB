@@ -223,6 +223,16 @@
       "photo": "images/centella.jpg",
       "amount": 2,
       "id": "qZMfrbaWz2E"
+    },
+    {
+      "userId": "u1",
+      "productId": "3",
+      "name": "Dr.G Red Blemish Clear Soothing Cream",
+      "cost": 34,
+      "description": "A light, soothing gel-cream containing a complex of 10 types of centella. It effectively relieves irritation.",
+      "photo": "images/red.webp",
+      "amount": 3,
+      "id": "BNDpM5O8mS0"
     }
   ],
   "orders": [

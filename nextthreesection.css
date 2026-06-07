@@ -43,6 +43,12 @@ body.no-scroll {
     transform: rotate(360deg);
   }
 }
+.cards-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9375rem;
+}
 .container-for-faqs {
   margin: 0 auto;
   display: flex;
